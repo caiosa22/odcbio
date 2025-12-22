@@ -1,0 +1,109 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+    background: linear-gradient(to bottom, #ffffff 0%, #f0f8f0 100%);
+    min-height: 100vh;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    max-width: 100%;
+    min-height: 100vh;
+    margin: 0;
+    border: 2px solid #2d8659;
+    border-radius: 0;
+    background: linear-gradient(to bottom, #ffffff 0%, #f5faf5 100%);
+    padding: 30px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Header com Logo */
+.header {
+    text-align: center;
+    margin-bottom: 40px;
+    padding-top: 50px;
+}
+
+.logo {
+    max-width: 300px;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
+
+/* Main Content */
+.main-content {
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    align-items: center;
+}
+
+/* Cards das Clínicas */
+.clinic-card {
+    width: 100%;
+    max-width: 800px;
+    background: transparent;
+    border-radius: 12px;
+    overflow: visible;
+    box-shadow: none;
+    transition: transform 0.3s ease;
+}
+
+.clinic-card:hover {
+    transform: translateY(-5px);
+}
+
+.card-link {
+    display: block;
+    width: 100%;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.card-image {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 12px;
+    background: transparent;
+}
+
+/* Responsividade */
+@media (min-width: 768px) {
+    .main-content {
+        flex-direction: row;
+        justify-content: center;
+        align-items: flex-start;
+        gap: 60px;
+    }
+
+    .clinic-card {
+        max-width: 400px;
+    }
+}
+
+@media (max-width: 767px) {
+    .container {
+        padding: 20px;
+    }
+
+    .header {
+        padding-top: 30px;
+    }
+
+    .logo {
+        max-width: 200px;
+    }
+
+    .main-content {
+        gap: 40px;
+    }
+}
+
